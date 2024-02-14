@@ -27,15 +27,15 @@ namespace WinFormsAppAsyncVsSync.Forms
         private void SimulateBackgroundTask()
         {
             SetupControlsForTheStartProcess();
-            for (var i = 0; i < 10; i++)
+            for (var i = 0; i <= 10; i++)
             {
                 UpdateTextBox(this.textBox1, i.ToString());
-                Task.Delay(500);
+                Task.Delay(500).Wait();
             }
-            for (var j = 0; j < 10; j++)
+            for (var j = 0; j <= 10; j++)
             {
-                UpdateTextBox(this.textBox1, j.ToString());
-                Task.Delay(500);
+                UpdateTextBox(this.textBox2, j.ToString());
+                Task.Delay(500).Wait();
             }
             SetupControlsForEndOfProcess();
         }

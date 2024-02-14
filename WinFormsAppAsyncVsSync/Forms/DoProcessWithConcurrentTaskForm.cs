@@ -33,8 +33,8 @@ namespace WinFormsAppAsyncVsSync.Forms
         {
             for (int i = 0; i <= 10; i++)
             {
-                Task.Delay(500).Wait();
                 UpdateTextBox(textBox, i.ToString());
+                Task.Delay(500).Wait();
             }
         }
 
